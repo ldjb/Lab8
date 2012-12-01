@@ -55,4 +55,14 @@ public class Notebook
             // This is not a valid note number, so do nothing.
         }
     }
+	
+	public void search(String searchTerm) {
+		for (int i=0; i < notes.size(); i++) {
+			String strNote = (String) notes.get(i);
+			if (strNote.contains(searchTerm)) {
+				System.out.println("[" + String.valueOf(i) + "] " + strNote);
+			}
+		}
+	}
+	
 }
