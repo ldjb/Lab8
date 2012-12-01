@@ -15,6 +15,8 @@ public class Circle
     private int yPosition;
     private String color;
     private boolean isVisible;
+    private static int numInstances;
+    private int instanceID;
     
     /**
      * Create a new circle at default position with default color.
@@ -26,6 +28,8 @@ public class Circle
         yPosition = 60;
         color = "blue";
         isVisible = false;
+        instanceID = numInstances;
+        numInstances++;
     }
 
     /**
@@ -189,4 +193,13 @@ public class Circle
             canvas.erase(this);
         }
     }
+    
+    public int getInstanceID() {
+    	return instanceID;
+    }
+    
+    public static int getNumInstances() {
+    	return numInstances;
+    }
+    
 }
