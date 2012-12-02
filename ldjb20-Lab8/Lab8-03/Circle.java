@@ -191,11 +191,14 @@ public class Circle
     }
     
     public String toString() {
-    	System.out.print("diameter: "); System.out.println(diameter);
-    	System.out.print("xPosition: "); System.out.println(xPosition);
-    	System.out.print("yPosition: "); System.out.println(yPosition);
-    	System.out.print("color: "); System.out.println(color);
-    	System.out.print("isVisible: "); System.out.println(isVisible);
+    	System.out.print("d" + Integer.toString(diameter) + "; "
+    		+ "x" + Integer.toString(xPosition) + "; "
+    		+ "y" + Integer.toString(yPosition) + "; "
+    		+ color);
+    	if (isVisible) {
+    		System.out.print("; visible");
+    	}
+    	System.out.println();
     	return null;
     }
     
